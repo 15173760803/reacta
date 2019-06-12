@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="js/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id=demo1></div>
+    <script type="text/babel">
+    var arr=["1111","2222"];
+    var [a1,a2]=arr;
+
+    var objc={name:"邹瓜瓜",age:30};
+    var {name,age}=objc;
+    var {name:name1,age:age1}=objc;
+       let htmldemo= <div> 
+                <h1>{a1}</h1>
+                <h2>{name}</h2>
+                <h3>{age1}</h3>
+                <h3>{1+1}</h3>
+                {/*<h3>{true?"真":"假"}</h3>*/}
+               </div>
+               ReactDOM.render(htmldemo,document.getElementById("demo1"));
+    </script>
+</body>
+</html>

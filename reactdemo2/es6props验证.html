@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/react.16.8.6.js"></script>
+    <script src="js/react-dom.16.8.6.js"></script>
+    <script src="js/babel.min.js"></script>
+    <script src="js/prop-types.js"></script>
+</head>
+<body>
+    <div id="demo"></div>
+    <script type="text/babel">
+      class DemoReact extends React.Component{
+        //   static defaultProps={sex:"默认男"}
+          render(){
+              return(
+                <div>
+                    <p>{this.props.name}</p>
+                    <p>{this.props.age}</p>
+                    <p>{this.props.sex}</p>
+                 </div>
+              )
+                  
+          }
+      }
+
+
+      DemoReact.propTypes={
+        name:PropTypes.number.isRequired
+    }
+    DemoReact.defaultProps={
+        age:100,
+        sex:"默认男"
+    }
+
+    var text=12;
+      ReactDOM.render(<DemoReact name={text}  age={27}/>,document.getElementById("demo"));
+    </script>
+</body>
+</html>

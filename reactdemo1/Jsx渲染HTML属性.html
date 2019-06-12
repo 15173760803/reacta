@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="js/babel.min.js"></script>
+    <title>Document</title>
+    <style>
+       .newimg{
+        width:200px;
+        height:100px;
+       }
+    </style>
+</head>
+<body>
+    <div id="demodiv2"></div>
+    
+    <script type="text/babel">
+       var srcsrc="1.jpg";
+    //    var newstyle={width:"200px",height:"100px"};
+       var imga=<img src={srcsrc} alt="jj"  className="newimg"/>
+       ReactDOM.render(imga,document.getElementById("demodiv2"));
+    </script>
+</body>
+</html>

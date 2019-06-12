@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="js/babel.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+        .item{
+            background-color: goldenrod;
+            border: 1px solid black;
+            height: 50px;
+        }
+        .demotwoitem-l{
+            width: 50%;
+            height: 50px;
+            float: left;
+            background-color: yellow;
+        }
+        .demotwoitem-r{
+            width: 50%;
+            height: 50px;
+            float: left;
+            background-color: pink;
+        }
+        .demotwoitem{
+            width: 100%;
+        }
+        .threefux{
+            width: 100%;
+            height: 600px;
+        }
+        .top{
+            width: 100%;
+            height:300px;
+            background-color: greenyellow;
+        }
+        .clear{
+            clear:both;
+        }
+        .bottom{
+            width: 100%;
+            height:300px;
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <div id="demobody">
+
+    </div>
+    <script type="text/babel">
+    //创建导航小组件
+    function LinkItem(){
+        return(
+            <div className="col-sm-3 item"></div>
+         )
+    }
+    
+     //创建导航组建
+     function LinkZu(){
+         return(
+            <div className="linkfu">
+            <LinkItem/>
+            <LinkItem/>
+            <LinkItem/>
+            <LinkItem/>
+            <LinkItem/>
+            <LinkItem/>
+            <LinkItem/>
+            <LinkItem/>
+            </div>
+         )
+     }
+     //第二个盒子子组建
+     function TwoItem() {
+         return(
+               <div className="demotwoitem">
+              <div className="demotwoitem-l"></div>
+              <div className="demotwoitem-r"></div>
+               <div className="clear"></div>
+            </div>
+         )
+      
+
+     }
+     //第二个盒子父组件
+    function  TwoFu(){
+        return(
+            <div className="demotwo">
+                <TwoItem/>
+            </div>
+        )
+    }
+    //第三个盒子
+    function DivThree(){
+        return(
+            <div className="threefu">
+                 <DivThreeitem/>
+                
+                </div>
+        )
+    }
+    //第三个盒子子组件
+    function DivThreeitem(){
+        return(
+            <div className="threefux">
+                
+                <div className="top"></div>
+                <div className="bottom"></div>
+                
+                </div>
+        )
+    }
+    // 创建页面组建
+    function PageZu(){
+        return(
+            <div className="pages">
+              <LinkZu/>
+              <DivThree/>
+                <TwoFu/>
+              
+            </div>
+        )
+    }
+    ReactDOM.render(<PageZu/>,document.getElementById("demobody"));
+    </script>
+</body>
+</html>

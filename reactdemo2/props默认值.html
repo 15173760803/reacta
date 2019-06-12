@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="js/babel.min.js"></script>
+</head>
+<body>
+    <div id="div1"></div>
+   
+    <script type="text/babel">
+        function  MyReact(props) {
+            // props.name=props.name||"默认名";
+              return(
+                <div>
+                    <p>{props.name}</p> 
+                    <p>{props.age}</p> 
+                    <p>{props.sex}</p> 
+                </div>
+              )
+        }
+     MyReact.defaultProps={
+        name:"默认名",
+         age:100,
+         sex:"nv"
+     }
+    
+        ReactDOM.render(<MyReact />,document.getElementById("div1"));   
+    </script>
+</body>
+</html>
